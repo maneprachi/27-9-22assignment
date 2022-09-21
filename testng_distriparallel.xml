@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+  <test thread-count="2" parallel="tests" name="Test_Runner1">
+    <classes>
+      <class name="TestngGroup.OrganizationTest"/>
+      <!-- here we can write multiple class all classes inside this test tag can run in 1 browser  -->
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="2" parallel="tests" name="Test_Runner2">
+    <classes>
+      <class name="TestngGroup.CreateOrgWithIndustry"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
+<!-- we use distributed parallel exe only to reduce time while running make changes in base class instead of after and before class
+ use before & after test.becoz we have to run in test level not class level-->
